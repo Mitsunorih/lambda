@@ -1,20 +1,18 @@
 package org.firstinspires.ftc.teamcode.RobotOpModes.TeleOperated;
 
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
-import com.qualcomm.robotcore.robot.Robot;
 
 import org.firstinspires.ftc.teamcode.Core.BaseClasses.OperationModes.EctoOpMode;
-import org.firstinspires.ftc.teamcode.Core.Utils.EctoMath;
-import org.firstinspires.ftc.teamcode.Mechanisms.ServoClaws;
+import org.firstinspires.ftc.teamcode.Mechanisms.ServoClaws1;
 
 public class ClawTest extends EctoOpMode {
 
-ServoClaws servoClaws;
+ServoClaws1 servoClaws;
 GamepadEx gamepad;
 
     @Override
     public void initRobotClasses() {
-        servoClaws = new ServoClaws("ServoClaws", "Mechanism");
+        servoClaws = new ServoClaws1("ServoClaws", "Mechanism");
         mechanismManager.addMechanism(servoClaws);
 
         gamepad = new GamepadEx(gamepad1);

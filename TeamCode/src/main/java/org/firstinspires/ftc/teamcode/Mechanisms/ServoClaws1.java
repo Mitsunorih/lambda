@@ -1,15 +1,14 @@
 package org.firstinspires.ftc.teamcode.Mechanisms;
 
 import org.firstinspires.ftc.teamcode.Core.BaseClasses.EctoMechanism;
-import org.firstinspires.ftc.teamcode.Core.Control.EctoMotor.EctoMotor;
 import org.firstinspires.ftc.teamcode.Core.Control.EctoServo.EctoServo;
 import org.firstinspires.ftc.teamcode.Core.Utils.EctoMath;
 
-public class ServoClaws extends EctoMechanism {
+public class ServoClaws1 extends EctoMechanism {
 
     EctoServo ServoClaws;
 
-    public ServoClaws(String moduleName, String moduleType) {
+    public ServoClaws1(String moduleName, String moduleType) {
         super(moduleName, moduleType);
     }
     //config pend
