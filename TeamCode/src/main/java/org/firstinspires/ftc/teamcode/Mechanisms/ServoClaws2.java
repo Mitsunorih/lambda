@@ -20,7 +20,7 @@ public class ServoClaws2 extends EctoMechanism {
 
     @Override
     public void initMechanism() {
-        ServoClaws2 = new EctoServo(hardwareMap, "ServoClaws2",EctoMath.degToRad(0),EctoMath.degToRad(135),false, 1.0, 1.0);
+        ServoClaws2 = new EctoServo(hardwareMap, "ServoClaws2",EctoMath.degToRad(0),EctoMath.degToRad(135),true, 1.0, 1.0);
 
     }
 
