@@ -34,7 +34,13 @@ public class TankTest extends EctoOpMode {
 
     @Override
     public void updateRobot(Double timeStep) {
-        tank.set(gamepad.getRightY()*0.8, gamepad.getLeftY()*0.8);
+        if(gamepad.getRightX() > 0){
+            tank.set(gamepad.getLeftY()+gamepad.getRightX(), gamepad.getLeftY());
+        } else if (gamepad.getRightX() < 0){
+            tank.set(gamepad.getLeftY(), gamepad.getLeftY()+gamepad.getRightX());
+        }
+
 
     }
 }
+//left joystick go ahead and back, right joystick go right and left
