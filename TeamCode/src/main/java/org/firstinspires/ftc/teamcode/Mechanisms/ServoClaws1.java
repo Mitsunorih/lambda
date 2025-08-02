@@ -16,6 +16,7 @@ public class ServoClaws1 extends EctoMechanism {
 
 
     public void set(int deg) {
+        ServoClaws2.set(EctoMath.degToRad(deg));
         ServoClaws.set(EctoMath.degToRad(deg));
     }
 
@@ -38,7 +39,8 @@ public class ServoClaws1 extends EctoMechanism {
 
     @Override
     public void updateMechanism() {
-    ServoClaws.update();
+        ServoClaws2.update();
+        ServoClaws.update();
     }
 
     @Override

@@ -31,7 +31,7 @@ public class EctoServo {
                 AngleUnit.RADIANS
         );
 
-        servo.setInverted(false);
+        servo.setInverted(isInverted);
 
         constraints = new TrapezoidProfile.Constraints(maxVel, maxAccel);
         this.isInverted = isInverted;
