@@ -1,25 +1,23 @@
 package org.firstinspires.ftc.teamcode.RobotOpModes.TeleOperated;
 
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Core.BaseClasses.OperationModes.EctoOpMode;
 import org.firstinspires.ftc.teamcode.Mechanisms.SampleMechanism.Tank;
+import org.firstinspires.ftc.teamcode.Mechanisms.ServoClaws1;
 
-@TeleOp(name = "Tank")
-public class TankTest extends EctoOpMode {
+@TeleOp(name = "RobotTest")
 
-    Tank tank;
-
-    GamepadEx gamepad;
+public class RobotTest extends EctoOpMode {
 
 
+        Tank tank;
+        ServoClaws1 servoClaws;
+
+        GamepadEx gamepad;
     @Override
     public void initRobotClasses() {
-        tank = new Tank("Tank","Mechanism");
-        mechanismManager.addMechanism(tank);
-        gamepad = new GamepadEx(gamepad1);
 
     }
 
@@ -36,11 +34,6 @@ public class TankTest extends EctoOpMode {
     @Override
     public void updateRobot(Double timeStep) {
 
-        tank.set(gamepad.getRightX() - gamepad.getLeftY(), gamepad.getRightX() + gamepad.getLeftY());
-
-
-
-
-
     }
 }
+//"haciendo todo en el mismo test para probar todos los mecanismos."

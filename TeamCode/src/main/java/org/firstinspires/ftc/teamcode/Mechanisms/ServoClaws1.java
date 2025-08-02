@@ -7,6 +7,7 @@ import org.firstinspires.ftc.teamcode.Core.Utils.EctoMath;
 public class ServoClaws1 extends EctoMechanism {
 
     EctoServo ServoClaws;
+    EctoServo ServoClaws2;
 
     public ServoClaws1(String moduleName, String moduleType) {
         super(moduleName, moduleType);
@@ -18,10 +19,16 @@ public class ServoClaws1 extends EctoMechanism {
         ServoClaws.set(EctoMath.degToRad(deg));
     }
 
+
+
+    //config pend
+
+
+
     @Override
     public void initMechanism() {
         ServoClaws = new EctoServo(hardwareMap, "ServoClaws",EctoMath.degToRad(0),EctoMath.degToRad(135),false, 1.0, 1.0);
-
+        ServoClaws2 = new EctoServo(hardwareMap, "ServoClaws2",EctoMath.degToRad(0),EctoMath.degToRad(135),true, 1.0, 1.0);
     }
 
     @Override
