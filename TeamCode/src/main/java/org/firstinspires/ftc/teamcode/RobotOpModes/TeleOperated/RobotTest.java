@@ -74,5 +74,7 @@ public class RobotTest extends EctoOpMode {
             servoClaws.set(0);
 
         }
+
+        telemetry.addData("Pose arm", armMotor.getPoseDeg());
     }
 }

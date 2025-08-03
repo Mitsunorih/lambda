@@ -22,6 +22,10 @@ public class ArmMotor extends EctoMechanism {
 
     }
 
+    public double getPoseDeg() {
+        return EctoMath.radToDeg(armMotor.getPose_rad());
+    }
+
 
     @Override
     public void initMechanism() {
@@ -30,9 +34,9 @@ public class ArmMotor extends EctoMechanism {
         motorrConfig.withEnableForwardSoftLimit(false);
         motorrConfig.withEnableReverseSoftLimit(false);
         motorrConfig.withTicksPerRev(4);
-        motorrConfig.withInternalMotorGearRatio(72/1);
+        motorrConfig.withInternalMotorGearRatio( (72.0/1.0) * (125.0 / 45.0) );
         armMotor = new EctoMotor(hardwareMap,motorrConfig);
-        pidMotor = new PIDController(0.1,0,0);
+        pidMotor = new PIDController(1,0,0);
 
     }
 
@@ -46,7 +50,7 @@ public class ArmMotor extends EctoMechanism {
         armMotor.update();
         double out;
         out = pidMotor.calculate(armMotor.getPose_rad());
-        armMotor.set(out);
+        //armMotor.set(out);
 
 
     }
