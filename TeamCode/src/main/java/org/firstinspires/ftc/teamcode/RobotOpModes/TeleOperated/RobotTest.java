@@ -45,26 +45,29 @@ public class RobotTest extends EctoOpMode {
 
     @Override
     public void startRobot() {
-
+        servoClaws.set(0);
     }
 
     @Override
     public void updateRobot(Double timeStep) {
         //arm
-        if (gamepad.getButton(RobotConfiguration.Buttons.rightBumper)) {
-            armMotor.set(30);
-        }else if (gamepad.getButton(RobotConfiguration.Buttons.leftBumper)) {
-            armMotor.set(-30);
-        }else {
-            armMotor.set(0);
+        if (gamepad.getButton(RobotConfiguration.Buttons.leftBumper)) {
+            armMotor.set(35);
+        }else if (gamepad.getButton(RobotConfiguration.Buttons.dPadDown)) {
+            armMotor.set(2);
+        //cone
+        }else if (gamepad.getButton(RobotConfiguration.Buttons.rightBumper)) {
+            armMotor.set(80);
+        }else if (gamepad.getButton(RobotConfiguration.Buttons.dPadUp)) {
+            armMotor.set(15);
+
+
         }
         //claws
         if (gamepad.getButton(RobotConfiguration.Buttons.dPadRight)){
-            servoClaws.set(40);
+            servoClaws.set(20);
 
         }else if (gamepad.getButton(RobotConfiguration.Buttons.dPadLeft)) {
-            servoClaws.set(-40);
-        }else {
             servoClaws.set(0);
         }
         //tank
